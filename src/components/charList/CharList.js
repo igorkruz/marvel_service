@@ -43,7 +43,8 @@ class CharList extends Component {
             charList: [...charList, ...newCharList],
             loading: false,
             newItemLoading: false,
-        offset:offset+9}))
+            offset: offset + 9
+        }))
     }
 
     onError = () => {
@@ -62,7 +63,6 @@ class CharList extends Component {
         this.itemsRef.forEach(item => { item.classList.remove('char__item_selected') });
         this.itemsRef[id].classList.add('char__item_selected');
         this.itemsRef[id].focus();
-        console.log(this.itemsRef[id])
     }
 
     renderItems (arr) {
