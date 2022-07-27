@@ -1,4 +1,5 @@
-import { Component } from "react/cjs/react.production.min";
+import { useState } from "react";
+
 
 import AppHeader from "../appHeader/AppHeader";
 import RandomChar from "../randomChar/RandomChar";
@@ -8,19 +9,16 @@ import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 
 import decoration from '../../resources/img/vision.png';
 
-class App extends Component {
-    state = {
-        selectedChar: null
-    }
+const App = () => {
 
-    onSelectedChar = (id) => {
-        this.setState({
-            selectedChar: id
-        })
+const [selectedChar, setChar] = useState(null)
+    
+    const onSelectedChar = (id) => {
+        setChar(id)
     }
     
     
-render() {
+
     return (
         <div className="app">
         <AppHeader/>
@@ -31,11 +29,11 @@ render() {
                 <div className="char__content">
                     <ErrorBoundary>
                         <CharList
-                            onSelectedChar={this.onSelectedChar}
-                            selectedChar={this.state.selectedChar} />
+                            onSelectedChar={onSelectedChar}
+                            selectedChar={selectedChar} />
                    </ErrorBoundary>
                     <ErrorBoundary>
-                        <CharInfo charId={this.state.selectedChar} />
+                        <CharInfo charId={selectedChar} />
                     </ErrorBoundary>
                 </div>
                     <img className="bg-decoration" src={decoration} alt="vision"/>
@@ -43,6 +41,6 @@ render() {
         </div>
     )
 }
-}
+
 
 export default App;
