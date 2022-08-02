@@ -1,23 +1,18 @@
 {
   "files": {
-    "main.css": "/marvel_service/static/css/main.1756c5cf.chunk.css",
-    "main.js": "/marvel_service/static/js/main.f3554470.chunk.js",
-    "main.js.map": "/marvel_service/static/js/main.f3554470.chunk.js.map",
-    "runtime-main.js": "/marvel_service/static/js/runtime-main.a3f53947.js",
-    "runtime-main.js.map": "/marvel_service/static/js/runtime-main.a3f53947.js.map",
-    "static/js/2.4fbbb599.chunk.js": "/marvel_service/static/js/2.4fbbb599.chunk.js",
-    "static/js/2.4fbbb599.chunk.js.map": "/marvel_service/static/js/2.4fbbb599.chunk.js.map",
+    "main.css": "/marvel_service/static/css/main.c2e5d07a.css",
+    "main.js": "/marvel_service/static/js/main.8083b328.js",
+    "static/media/vision.png": "/marvel_service/static/media/vision.067d4ae1936d64a577ce.png",
+    "static/media/mjolnir.png": "/marvel_service/static/media/mjolnir.61f31e1809f12183a524.png",
+    "static/media/Avengers.png": "/marvel_service/static/media/Avengers.4065c8f9c94e3d8b039a.png",
+    "static/media/error.gif": "/marvel_service/static/media/error.42292aa12b6bc303ce99.gif",
+    "static/media/Avengers_logo.png": "/marvel_service/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/marvel_service/index.html",
-    "static/css/main.1756c5cf.chunk.css.map": "/marvel_service/static/css/main.1756c5cf.chunk.css.map",
-    "static/js/2.4fbbb599.chunk.js.LICENSE.txt": "/marvel_service/static/js/2.4fbbb599.chunk.js.LICENSE.txt",
-    "static/media/error.42292aa1.gif": "/marvel_service/static/media/error.42292aa1.gif",
-    "static/media/mjolnir.61f31e18.png": "/marvel_service/static/media/mjolnir.61f31e18.png",
-    "static/media/vision.067d4ae1.png": "/marvel_service/static/media/vision.067d4ae1.png"
+    "main.c2e5d07a.css.map": "/marvel_service/static/css/main.c2e5d07a.css.map",
+    "main.8083b328.js.map": "/marvel_service/static/js/main.8083b328.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.a3f53947.js",
-    "static/js/2.4fbbb599.chunk.js",
-    "static/css/main.1756c5cf.chunk.css",
-    "static/js/main.f3554470.chunk.js"
+    "static/css/main.c2e5d07a.css",
+    "static/js/main.8083b328.js"
   ]
 }
