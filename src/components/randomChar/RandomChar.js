@@ -1,6 +1,6 @@
 import { useState,  useEffect } from 'react'
 
-import MarvelService from '../../services/MarvelService';
+import useMarvelService from '../../services/MarvelService';
 import Spiner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
@@ -9,54 +9,37 @@ import mjolnir from '../../resources/img/mjolnir.png';
 
 
 const RandomChar = () => {
-    const [char, setChar] = useState({});
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
+    const [char, setChar] = useState(null);
     
-    const marvelService = new MarvelService();
-    let count = 0
+    const { loading, error, clearError, getCharacter } = useMarvelService();
 
     useEffect(() => {
         updateChar();
-      /* We can use timer for update the char automatically */
+    //    We can use timer for update the char automatically */
         
         // let timerId = setInterval(updateChar, 5000);
         // return (() => {
         //     clearInterval(timerId); 
-
-        // }) 
+        //  }) 
     },[])
         
     const onCharLoaded = (char) => {
         setChar(char);
-        setLoading(false);
-    }
-
-    const onCharLoading = () => {
-        setLoading(true);
-    }
-
-    const onError = () => {
-        setLoading(false);
-        setError(true);
     }
 
     const updateChar = () => {
-        const id = Math.floor(Math.random() *(1011400 - 1011000)+ 1011000);
+        clearError();
         
-        onCharLoading()
+        const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
+        getCharacter(id)
+            .then(onCharLoaded);
         
-        marvelService.getCharacter(id)
-        .then(onCharLoaded)
-        .catch(onError)
-        
-        console.log(count++)
     }
 
 
     const errorMessage = error ? <ErrorMessage /> : null;
     const spinner = loading ? <Spiner /> : null;
-    const content = !(loading || error) ? <View char={char}/>: null
+    const content = !(loading || error|| !char) ? <View char={char}/>: null
     
     return (
         <div className="randomchar">
