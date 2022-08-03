@@ -13,7 +13,7 @@ const App = () => {
                 <AppHeader />
                 <main>
                     <Routes>
-                        <Route path='/marvel_service' element={<MainPage />} />
+                        <Route path='/marvel_service/home' element={<MainPage />} />
                         
                         <Route path='/comics' element={<ComicsPages/>}/>
                     </Routes>
