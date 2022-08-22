@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import AppHeader from "../appHeader/AppHeader";
 import Spiner from '../spinner/Spinner';
-import SinglePage from '../pages/SinglePage';
 import SingleCharacterLayout from '../pages/singleCharacterLayout/SingleCharacterLayout';
 import SingleComicLayout from '../pages/sinlgeComicLayout/SingleComicLayout';
+import Error404 from '../pages/error404/Error404';
 
 const MainPage = lazy(() => import('../pages/MainPage'));
 const ComicsPages = lazy(() => import('../pages/ComicsPage'));
-// const SingleComicPage= lazy(() => import('../pages/SingleComicPage'));
+const SinglePage= lazy(() => import('../pages/SinglePage'));
 
 const App = () => {
 
@@ -28,6 +28,7 @@ const App = () => {
                             <Route path='/comics' element={<ComicsPages />} />
                             <Route path='/comics/:id' element={<SinglePage Component={SingleComicLayout} dataType='comics' />} />
                             <Route path='/characters/:id' element={<SinglePage Component={SingleCharacterLayout} dataType='character' />} />
+                            <Route path='*' element={<Error404/> } />
                             
                         </Routes>
                     </Suspense>
