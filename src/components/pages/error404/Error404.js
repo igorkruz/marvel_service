@@ -7,7 +7,7 @@ const Error404 = () => {
     return (
         
         <div className='block'>
-            <h1>Somthing was wrong</h1>
+            <h1>This page <span>NOT</span> exist</h1>
             <div className='navigation'>
 
             <div className="randomchar__btns">

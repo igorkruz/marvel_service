@@ -17,10 +17,12 @@ const RandomChar = () => {
         updateChar();
     //    We can use timer for update the char automatically */
         
-        // let timerId = setInterval(updateChar, 5000);
-        // return (() => {
-        //     clearInterval(timerId); 
-        //  }) 
+        let timerId = setInterval(updateChar, 5000);
+        return (() => {
+            clearInterval(timerId);
+         }) 
+        
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
         
     const onCharLoaded = (char) => {
